@@ -23,9 +23,11 @@
         </div>
         <nav class="nav-right">
             <ul>
-                <li><a href="index.html#mapa-alertas-section">Mapa de Alertas</a></li>
-                <li><a href="index.html#relatar-incidente-section">Relatar Incidente</a></li>
+                <li><a href="index.html#mapa-alertas-section">Mapa de alertas</a></li>
+                <li><a href="index.html#relatar-incidente-section">Relatar incidente</a></li>
+                <li><a href="clima.html">Clima</a></li>
                 <li><a href="forum.html">Fórum</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
                 <li><a href="sobre-o-app.html">Sobre o App</a></li>
                 <li><a href="ajuda.html">Ajuda/FAQ</a></li>
                 <li><a href="login.html" class="btn-login-nav">Login</a></li>
@@ -36,7 +38,7 @@
     <main>
         <section id="forum-principal" class="section bg-light">
             <div class="container">
-                <h1><i class="fas fa-comments"></i> Fórum da Comunidade Pharos</h1>
+                <h1><i class="fas fa-comments"></i> Fórum da comunidade Pharos</h1>
                 <p>Conecte-se, compartilhe informações e colabore com outros usuários para um ambiente mais seguro.</p>
 
                 <div class="forum-container">
@@ -45,70 +47,71 @@
                         <button class="btn-principal btn-novo-topico"><i class="fas fa-plus-circle"></i> Novo Tópico</button>
                     </div>
 
-                    <!-- Abas simuladas (apenas visual, sem funcionalidade JS por enquanto) -->
+                    <!-- abas -->
                     <div class="forum-abas">
-                        <button class="aba-forum ativa">Tópicos Recentes</button>
-                        <button class="aba-forum">Minhas Publicações</button>
-                        <button class="aba-forum">Categorias</button>
+                        <button class="aba-forum ativa" data-aba="recentes">Tópicos recentes</button>
+                        <button class="aba-forum" data-aba="minhas-publicacoes">Minhas publicações</button>
+                        <button class="aba-forum" data-aba="categorias">Categorias</button>
                     </div>
 
-                    <div class="lista-topicos">
-                        <!-- Exemplo de Tópico/Post no Fórum -->
-                        <div class="topico-card">
-                            <div class="topico-avatar">
-                                <img src="imagens/avatar-placeholder.png" alt="Avatar usuário">
-                                <!-- Ou use um ícone do Font Awesome: <i class="fas fa-user-circle fa-2x"></i> -->
-                            </div>
-                            <div class="topico-conteudo">
-                                <h3 class="topico-titulo"><a href="#">Alerta de Alagamento na Rua das Acácias</a></h3>
-                                <p class="topico-info">
-                                    Iniciado por <span class="topico-autor">UsuárioVerificado123</span> em <span class="topico-categoria">Alertas Locais</span>
-                                    <span class="topico-data"> - há 2 horas</span>
-                                </p>
-                                <p class="topico-resumo">Pessoal, a rua das Acácias está começando a alagar perto do córrego. Tomem cuidado ao passar por lá! Alguém tem mais informações?</p>
-                            </div>
-                            <div class="topico-stats">
-                                <span><i class="fas fa-comment-dots"></i> 12 Respostas</span>
-                                <span><i class="fas fa-eye"></i> 150 Visualizações</span>
-                            </div>
-                        </div>
-
-                        <div class="topico-card">
-                            <div class="topico-avatar">
-                                <img src="imagens/avatar-placeholder-2.png" alt="Avatar usuário">
-                            </div>
-                            <div class="topico-conteudo">
-                                <h3 class="topico-titulo"><a href="#">Ponto de Coleta de Doações - Ginásio Central</a></h3>
-                                <p class="topico-info">
-                                    Iniciado por <span class="topico-autor">VoluntariaAna</span> em <span class="topico-categoria">Doações e Ajuda</span>
-                                    <span class="topico-data"> - há 5 horas</span>
-                                </p>
-                                <p class="topico-resumo">Estamos recebendo água, alimentos não perecíveis e cobertores no Ginásio Central até as 18h. Toda ajuda é bem-vinda!</p>
-                            </div>
-                            <div class="topico-stats">
-                                <span><i class="fas fa-comment-dots"></i> 5 Respostas</span>
-                                <span><i class="fas fa-eye"></i> 88 Visualizações</span>
+                    <!-- conteúdo das abas -->
+                    <div class="conteudo-abas">
+                        <!-- aba 1 -->
+                        <div id="aba-recentes" class="conteudo-aba ativo">
+                            <div class="lista-topicos">
+                                <!-- tópico 1 -->
+                                <div class="topico-card">
+                                    <div class="topico-avatar"><img src="imagens/avatar-placeholder.png" alt="Avatar" class="avatar-nivel-sentinela"></div>
+                                    <div class="topico-conteudo">
+                                        <h3 class="topico-titulo"><a href="#">Alerta de alagamento na Rua das Acácias</a></h3>
+                                        <p class="topico-info">Iniciado por <span class="topico-autor">PabloSilva</span> em <span class="topico-categoria">Alertas locais</span><span class="topico-data"> - há 2 horas</span></p>
+                                        <p class="topico-resumo">Pessoal, a rua das Acácias está começando a alagar perto do córrego. Tomem cuidado ao passar por lá! Alguém tem mais informações?</p>
+                                    </div>
+                                    <div class="topico-stats"><span><i class="fas fa-comment-dots"></i> 12 Respostas</span><span><i class="fas fa-eye"></i> 150 Visualizações</span></div>
+                                </div>
+                                <!-- tópico 2 -->
+                                <div class="topico-card">
+                                    <div class="topico-avatar"><img src="imagens/avatar-placeholder-2.png" alt="Avatar" class="avatar-nivel-guardiao"></div>
+                                    <div class="topico-conteudo">
+                                        <h3 class="topico-titulo"><a href="#">Ponto de coleta de doações - Ginásio central</a></h3>
+                                        <p class="topico-info">Iniciado por <span class="topico-autor">VoluntariaAna</span> em <span class="topico-categoria">Doações e Ajuda</span><span class="topico-data"> - há 5 horas</span></p>
+                                        <p class="topico-resumo">Estamos recebendo água, alimentos não perecíveis e cobertores no Ginásio Central até as 18h. Toda ajuda é bem-vinda!</p>
+                                    </div>
+                                    <div class="topico-stats"><span><i class="fas fa-comment-dots"></i> 5 Respostas</span><span><i class="fas fa-eye"></i> 88 Visualizações</span></div>
+                                </div>
                             </div>
                         </div>
 
-                         <div class="topico-card">
-                            <div class="topico-avatar">
-                                 <i class="fas fa-user-shield fa-2x topico-avatar-icone"></i> <!-- Exemplo com icone -->
-                            </div>
-                            <div class="topico-conteudo">
-                                <h3 class="topico-titulo"><a href="#">Dicas para se preparar para tempestades de verão</a></h3>
-                                <p class="topico-info">
-                                    Iniciado por <span class="topico-autor">DefesaCivilLocal</span> em <span class="topico-categoria">Prevenção</span>
-                                    <span class="topico-data"> - ontem</span>
-                                </p>
-                                <p class="topico-resumo">Com a chegada do verão, é importante revisar calhas, podar árvores e ter um kit de emergência. Compartilhem suas dicas!</p>
-                            </div>
-                            <div class="topico-stats">
-                                <span><i class="fas fa-comment-dots"></i> 25 Respostas</span>
-                                <span><i class="fas fa-eye"></i> 320 Visualizações</span>
+                        <!-- aba 2 -->
+                        <div id="aba-minhas-publicacoes" class="conteudo-aba">
+                            <div class="lista-topicos">
+                                <div class="topico-card">
+                                    <div class="topico-avatar"><img src="imagens/cat.png" alt="Avatar" class="avatar-nivel-comandante"></div>
+                                    <div class="topico-conteudo">
+                                        <h3 class="topico-titulo"><a href="#">Dicas para preparar kit de emergência em casa</a></h3>
+                                        <p class="topico-info">Você iniciou este tópico em <span class="topico-categoria">Prevenção</span><span class="topico-data"> - há 3 horas</span></p>
+                                        <p class="topico-resumo">Olá, vizinhança! Compartilho aqui um checklist simples para montar seu kit de emergência doméstico: 
+                                            água potável (3L/pessoa/dia), alimentos não perecíveis, lanternas, pilhas extras, medicamentos essenciais e documentos em saco à prova d’água. Complemente com itens de higiene e um rádio de pilha. Quem tiver sugestões de fornecedores ou itens adicionais, poste aqui!</p>
+                                    </div>
+                                    <div class="topico-stats">
+                                        <span><i class="fas fa-comment-dots"></i> 5 Respostas</span>
+                                        <span><i class="fas fa-eye"></i> 78 Visualizações</span>
+                                    </div>
+                                </div>
+                                <p class="aviso-sem-conteudo" style="text-align:center; padding: 20px; color: var(--gray-medium);">Você não tem outras publicações.</p>
                             </div>
                         </div>
-                        <!-- Adicionar mais tópicos simulados -->
+
+                        <!-- aba 3 -->
+                        <div id="aba-categorias" class="conteudo-aba">
+                            <div class="categorias-grid">
+                                <a href="#" class="categoria-card"><i class="fas fa-exclamation-triangle"></i><span>Alertas locais</span></a>
+                                <a href="#" class="categoria-card"><i class="fas fa-hand-holding-heart"></i><span>Doações e Ajuda</span></a>
+                                <a href="#" class="categoria-card"><i class="fas fa-user-shield"></i><span>Prevenção</span></a>
+                                <a href="#" class="categoria-card"><i class="fas fa-tools"></i><span>Problemas de infraestrutura</span></a>
+                                <a href="#" class="categoria-card"><i class="fas fa-users"></i><span>Voluntariado</span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,7 +119,6 @@
     </main>
 
     <footer class="footer">
-        <!-- Seu rodapé aqui (pode copiar do index.html) -->
         <div class="container footer-container">
             <div class="footer-left">
                 <img src="imagens/logo-pharos.PNG" alt="Pharos" class="footer-logo">
@@ -132,8 +134,8 @@
                 <div class="footer-links">
                     <h4>Navegação</h4>
                     <ul>
-                        <li><a href="index.html#mapa-alertas-section">Mapa de Alertas</a></li>
-                        <li><a href="index.html#relatar-incidente-section">Relatar Incidente</a></li>
+                        <li><a href="index.html#mapa-alertas-section">Mapa de alertas</a></li>
+                        <li><a href="index.html#relatar-incidente-section">Relatar incidente</a></li>
                         <li><a href="forum.html">Fórum</a></li>
                         <li><a href="sobre-o-app.html">Sobre o App</a></li>
                          <li><a href="ajuda.html">Ajuda/FAQ</a></li>

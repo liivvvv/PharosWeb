@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta - Pharos</title>
+    <title>Criar conta - Pharos</title>
     <link rel="icon" href="imagens/logo-pharos.PNG" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,33 +12,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="auth-page-bg">
-    <header id="navbar" class="navbar">
-        <div class="nav-left">
-            <a href="index.html"><img src="imagens/logo-pharos.PNG" alt="Pharos" class="logo logo-pharos-nav"></a>
-        </div>
-        <div id="nav-toggle" class="nav-toggle"><span></span><span></span><span></span></div>
-        <nav class="nav-right">
-             <ul>
-                <li><a href="index.html#mapa-alertas-section">Mapa de Alertas</a></li>
-                <li><a href="index.html#relatar-incidente-section">Relatar Incidente</a></li>
-                <li><a href="forum.html">Fórum</a></li>
-                <li><a href="sobre-o-app.html">Sobre o App</a></li>
-                <li><a href="ajuda.html">Ajuda/FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main class="auth-main">
         <div class="auth-container">
             <div class="auth-header">
-                <img src="imagens/logo-pharos.PNG" alt="Logo Pharos" class="auth-logo">
-                <h2>Crie sua Conta Pharos</h2>
+                <img src="imagens/logo-pharos-azul.png" alt="Logo Pharos" class="auth-logo">
+                <h2>Crie sua conta Pharos</h2>
                 <p>Junte-se à comunidade e mantenha-se seguro.</p>
             </div>
 
             <form id="form-cadastro" class="auth-form">
                 <div class="form-group">
-                    <label for="cadastro-nome">Nome Completo</label>
+                    <label for="cadastro-nome">Nome completo</label>
                     <input type="text" id="cadastro-nome" name="cadastro-nome" required placeholder="Seu nome completo">
                 </div>
                 <div class="form-group">
@@ -50,7 +34,7 @@
                     <input type="password" id="cadastro-senha" name="cadastro-senha" required placeholder="Crie uma senha forte">
                 </div>
                 <div class="form-group">
-                    <label for="cadastro-confirma-senha">Confirmar Senha</label>
+                    <label for="cadastro-confirma-senha">Confirmar senha</label>
                     <input type="password" id="cadastro-confirma-senha" name="cadastro-confirma-senha" required placeholder="Repita sua senha">
                 </div>
 
@@ -60,7 +44,7 @@
                         Eu li e concordo com os <a href="termos.html" target="_blank" class="link-interno">Termos de Uso</a> e a <a href="privacidade.html" target="_blank" class="link-interno">Política de Privacidade</a>.
                     </label>
                 </div>
-                <button type="submit" class="btn-principal btn-auth">Criar Conta</button>
+                <button type="submit" class="btn-principal btn-auth">Criar conta</button>
                 <p id="cadastro-mensagem-sucesso" class="mensagem-sucesso" style="display:none;"></p>
                 <p id="cadastro-mensagem-erro" class="mensagem-erro" style="display:none;"></p>
             </form>

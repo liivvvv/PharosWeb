@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharos - Segurança Comunitária</title>
+    <title>Pharos</title>
     <link rel="icon" href="imagens/logo-pharos.PNG" type="image/png">
 
-    <!-- Google Fonts (Manter as que já usa) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,7 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Leaflet CSS (Para OpenStreetMap) -->
+    <!-- Leaflet CSS (OpenStreetMap) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     <link rel="stylesheet" href="css/style.css">
@@ -23,88 +22,105 @@
     <header id="navbar" class="navbar">
         <div class="nav-left">
             <a href="index.html"><img src="imagens/logo-pharos.PNG" alt="Pharos" class="logo logo-pharos-nav"></a>
-            <!-- Logos de parceiros podem ficar aqui ou no rodapé, se desejar -->
         </div>
         <div id="nav-toggle" class="nav-toggle">
             <span></span><span></span><span></span>
         </div>
         <nav class="nav-right">
             <ul>
-                <li><a href="index.html#mapa-alertas-section">Mapa de Alertas</a></li>
-                <li><a href="index.html#relatar-incidente-section">Relatar Incidente</a></li>
+                <li><a href="index.html#mapa-alertas-section">Mapa de alertas</a></li>
+                <li><a href="index.html#relatar-incidente-section">Relatar incidente</a></li>
+                <li><a href="clima.html">Clima</a></li>
                 <li><a href="forum.html">Fórum</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
                 <li><a href="sobre-o-app.html">Sobre o App</a></li>
                 <li><a href="ajuda.html">Ajuda/FAQ</a></li>
-                <li><a href="login.html" class="btn-login-nav">Login</a></li> <!-- Botão de Login -->
+                <li><a href="login.html" class="btn-login-nav">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Seção do Mapa e Alertas -->
+        <!-- seção do mapa e alertas -->
         <section id="mapa-alertas-section" class="section section-mapa-alertas">
             <div class="mapa-alertas-container">
                 <div id="mapa-pharos" class="mapa-view">
-                    <!-- O mapa OpenStreetMap será renderizado aqui -->
                     <p>Carregando mapa...</p>
                 </div>
                 <aside class="alertas-lista-sidebar">
-                    <h3><i class="fas fa-bell"></i> Alertas Recentes</h3>
+                    <h3><i class="fas fa-bell"></i> Alertas recentes</h3>
                     <div class="alertas-scroll">
-                        <!-- Exemplo de Card de Alerta (serão vários, simulados) -->
+                        <!-- Card de Alertas -->
                         <div class="alerta-card risco-alto">
-                            <h4><i class="fas fa-house-flood-water"></i> Enchente na Zona Leste</h4>
+                            <h4><i class="fas fa-cloud-showers-heavy"></i> Enchente na Zona Leste</h4>
                             <p class="alerta-localidade">Rua das Palmeiras, Bairro Primavera</p>
                             <p class="alerta-descricao">Nível do rio subindo rapidamente. Evacue áreas baixas.</p>
                             <span class="alerta-timestamp">Há 5 min</span>
                         </div>
                         <div class="alerta-card risco-moderado">
-                            <h4><i class="fas fa-landslide"></i> Risco de Deslizamento</h4>
+                            <h4><i class="fas fa-mountain"></i> Risco de deslizamento</h4>
                             <p class="alerta-localidade">Encosta do Morro da Esperança</p>
                             <p class="alerta-descricao">Solo instável devido às chuvas. Atenção redobrada.</p>
                             <span class="alerta-timestamp">Há 30 min</span>
                         </div>
                         <div class="alerta-card risco-baixo">
-                            <h4><i class="fas fa-wind"></i> Vento Forte</h4>
+                            <h4><i class="fas fa-wind"></i> Vento forte</h4>
                             <p class="alerta-localidade">Região Central</p>
                             <p class="alerta-descricao">Rajadas de vento podem causar queda de galhos.</p>
                             <span class="alerta-timestamp">Há 1 hora</span>
                         </div>
-                        <!-- Mais cards de alerta aqui -->
+                        <div class="alerta-card risco-alto">
+                            <h4><i class="fas fa-thermometer-three-quarters"></i> Onda de calor</h4>
+                            <p class="alerta-localidade">Bairro Novo Horizonte</p>
+                            <p class="alerta-descricao">Temperaturas acima de 40°C. Mantenha-se hidratado e evite exposição.</p>
+                            <span class="alerta-timestamp">Há 10 min</span>
+                        </div>
+                        <div class="alerta-card risco-moderado">
+                            <h4><i class="fas fa-cloud-showers-heavy"></i> Trovoadas severas</h4>
+                            <p class="alerta-localidade">Região Metropolitana</p>
+                            <p class="alerta-descricao">Possibilidade de raios e granizo. Busque abrigo seguro.</p>
+                            <span class="alerta-timestamp">Há 45 min</span>
+                        </div>
+                        <div class="alerta-card risco-baixo">
+                            <h4><i class="fas fa-water"></i> Alerta de nível de represa</h4>
+                            <p class="alerta-localidade">Barragem do Rio Verde</p>
+                            <p class="alerta-descricao">Nível estável, mas continuar monitorando.</p>
+                            <span class="alerta-timestamp">Há 2 horas</span>
+                        </div>
                     </div>
                 </aside>
             </div>
         </section>
 
-        <!-- Seção para Relatar Incidente -->
+        <!-- seção para relatar incidente -->
         <section id="relatar-incidente-section" class="section bg-light">
             <div class="container">
-                <h2><i class="fas fa-bullhorn"></i> Relatar um Incidente</h2>
+                <h2><i class="fas fa-bullhorn"></i> Relatar um incidente</h2>
                 <p>Viu algo que precisa de atenção? Ajude a comunidade informando abaixo. Sua segurança em primeiro lugar!</p>
                 <form id="form-relato" class="form-relato">
                     <div class="form-group">
-                        <label for="tipo-incidente">Tipo de Incidente:</label>
+                        <label for="tipo-incidente">Tipo de incidente:</label>
                         <select id="tipo-incidente" name="tipo-incidente" required>
                             <option value="">Selecione o tipo...</option>
                             <option value="enchente">Enchente / Alagamento</option>
-                            <option value="deslizamento">Deslizamento de Terra</option>
+                            <option value="deslizamento">Deslizamento de terra</option>
                             <option value="incendio">Incêndio Florestal / Urbano</option>
-                            <option value="queda-energia">Queda de Energia</option>
-                            <option value="ventos-fortes">Ventos Fortes / Tempestade</option>
-                            <option value="infraestrutura">Problema de Infraestrutura (poste caído, buraco, etc.)</option>
+                            <option value="queda-energia">Queda de energia</option>
+                            <option value="ventos-fortes">Ventos fortes / Tempestade</option>
+                            <option value="infraestrutura">Problema de infraestrutura (poste caído, buraco, etc.)</option>
                             <option value="outro">Outro</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="localizacao-incidente">Localização Aproximada:</label>
+                        <label for="localizacao-incidente">Localização aproximada:</label>
                         <input type="text" id="localizacao-incidente" name="localizacao-incidente" placeholder="Ex: Rua Exemplo, 123, Bairro Teste ou Ponto de Referência" required>
                     </div>
                     <div class="form-group">
-                        <label for="descricao-incidente">Descreva o Incidente (seja breve e objetivo):</label>
+                        <label for="descricao-incidente">Descreva o incidente (seja breve e objetivo):</label>
                         <textarea id="descricao-incidente" name="descricao-incidente" rows="4" placeholder="O que está acontecendo? Há riscos imediatos?" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="nivel-risco">Nível de Risco Percebido:</label>
+                        <label for="nivel-risco">Nível de risco percebido:</label>
                         <select id="nivel-risco" name="nivel-risco">
                             <option value="baixo">Baixo</option>
                             <option value="moderado" selected>Moderado</option>
@@ -112,7 +128,7 @@
                             <option value="critico">Crítico / Imediato</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-principal">Enviar Relato</button>
+                    <button type="submit" class="btn btn-principal">Enviar relato</button>
                 </form>
                 <p id="mensagem-confirmacao-relato" class="mensagem-confirmacao" style="display:none;">Obrigado! Seu relato foi enviado para análise (simulação).</p>
             </div>
@@ -136,8 +152,8 @@
                 <div class="footer-links">
                     <h4>Navegação</h4>
                     <ul>
-                        <li><a href="index.html#mapa-alertas-section">Mapa de Alertas</a></li>
-                        <li><a href="index.html#relatar-incidente-section">Relatar Incidente</a></li>
+                        <li><a href="index.html#mapa-alertas-section">Mapa de alertas</a></li>
+                        <li><a href="index.html#relatar-incidente-section">Relatar incidente</a></li>
                         <li><a href="forum.html">Fórum</a></li>
                         <li><a href="sobre-o-app.html">Sobre o App</a></li>
                          <li><a href="ajuda.html">Ajuda/FAQ</a></li>
@@ -164,7 +180,7 @@
         </div>
     </footer>
 
-    <!-- Leaflet JS (Para OpenStreetMap) - Adicionaremos quando formos integrar o mapa -->
+    <!-- Leaflet JS (OpenStreetMap) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/script.js"></script>
 </body>
